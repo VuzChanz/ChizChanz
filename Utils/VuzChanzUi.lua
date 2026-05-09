@@ -538,7 +538,7 @@ function VuzChanzUI:Window(Args)
         Size = UDim2.new(1, 0, 0, 14),
         Font = Enum.Font.GothamSemibold,
         RichText = true,
-        Text = "Expires at",
+        Text = "Use player",
         TextColor3 = Color3.fromRGB(255, 0, 127),
         TextSize = 13,
         TextStrokeTransparency = 0.699999988079071,
@@ -567,7 +567,7 @@ function VuzChanzUI:Window(Args)
         Size = UDim2.new(1, 0, 0, 10),
         Font = Enum.Font.GothamMedium,
         RichText = true,
-        Text = "00:00:00 Hours",
+        Text = LocalPlayer.DisplayName,
         TextColor3 = Color3.fromRGB(255, 255, 255),
         TextSize = 10,
         TextStrokeTransparency = 0.699999988079071,
@@ -2158,8 +2158,8 @@ function VuzChanzUI:Window(Args)
                 IgnoreGuiInset = true
             })
             
-            local Pillow_1 = VuzChanzUI:Create("TextButton", {
-                Name = "Pillow",
+            local NutIconDongMo_1 = VuzChanzUI:Create("TextButton", {
+                Name = "NutIconDongMo",
                 Parent = ToggleScreen,
                 BackgroundColor3 = Color3.fromRGB(11, 11, 11),
                 BorderSizePixel = 0,
@@ -2170,13 +2170,13 @@ function VuzChanzUI:Window(Args)
             })
 
             VuzChanzUI:Create("UICorner", {
-                Parent = Pillow_1,
+                Parent = NutIconDongMo_1,
                 CornerRadius = UDim.new(1, 0)
             })
 
-            local Logo = VuzChanzUI:Create("ImageLabel", {
-                Name = "Logo",
-                Parent = Pillow_1,
+            local LogoIconDongMo = VuzChanzUI:Create("ImageLabel", {
+                Name = "LogoIconDongMo",
+                Parent = NutIconDongMo_1,
                 AnchorPoint = Vector2.new(0.5, 0.5),
                 BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                 BackgroundTransparency = 1,
@@ -2187,13 +2187,13 @@ function VuzChanzUI:Window(Args)
             })
             
             VuzChanzUI:Create("UICorner", {
-                Parent = Logo,
+                Parent = LogoIconDongMo,
                 CornerRadius = UDim.new(1, 0)
             })
 
-            VuzChanzUI:Draggable(Pillow_1)
+            VuzChanzUI:Draggable(NutIconDongMo_1)
             
-            Pillow_1.MouseButton1Click:Connect(function()
+            NutIconDongMo_1.MouseButton1Click:Connect(function()
                 if Background_1 then
                     Background_1.Visible = not Background_1.Visible
                 end
