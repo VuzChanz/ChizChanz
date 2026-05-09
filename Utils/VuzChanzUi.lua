@@ -2165,7 +2165,8 @@ function VuzChanzUI:Window(Args)
                 BorderSizePixel = 0,
                 Position = UDim2.new(0.06, 0, 0.15, 0),
                 Size = UDim2.new(0, 50, 0, 50),
-                Text = ""
+                Text = "",
+                ClipsDescendants = true
             })
 
             VuzChanzUI:Create("UICorner", {
@@ -2173,7 +2174,7 @@ function VuzChanzUI:Window(Args)
                 CornerRadius = UDim.new(1, 0)
             })
 
-            VuzChanzUI:Create("ImageLabel", {
+            local Logo = VuzChanzUI:Create("ImageLabel", {
                 Name = "Logo",
                 Parent = Pillow_1,
                 AnchorPoint = Vector2.new(0.5, 0.5),
@@ -2181,14 +2182,21 @@ function VuzChanzUI:Window(Args)
                 BackgroundTransparency = 1,
                 BorderSizePixel = 0,
                 Position = UDim2.new(0.5, 0, 0.5, 0),
-                Size = UDim2.new(0.5, 0, 0.5, 0),
-                Image = "rbxassetid://129736089317081"
+                Size = UDim2.new(1, 0, 1, 0),
+                Image = "rbxassetid://134528790539968"
+            })
+            
+            VuzChanzUI:Create("UICorner", {
+                Parent = Logo,
+                CornerRadius = UDim.new(1, 0)
             })
 
             VuzChanzUI:Draggable(Pillow_1)
             
             Pillow_1.MouseButton1Click:Connect(function()
-                Background_1.Visible = not Background_1.Visible
+                if Background_1 then
+                    Background_1.Visible = not Background_1.Visible
+                end
             end)
             
             UserInputService.InputBegan:Connect(function(Input, Processed)
