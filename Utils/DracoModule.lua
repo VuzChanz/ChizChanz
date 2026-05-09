@@ -161,7 +161,7 @@ AddModule("Asset", function()
 
     do
         if not isfile("DRACOCHANZ.png") then
-            Asset:Download("https://raw.githubusercontent.com/VuzChanz/ChizChanz/main/assets/VuzChanz.png", "DRACOCHANZ.png") 
+            Asset:Download("https://raw.githubusercontent.com/VuzChanz/ChizChanz/refs/heads/main/assets/VuzChanz.png", "DRACOCHANZ.png") 
         end
     end
 
