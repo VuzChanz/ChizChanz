@@ -525,10 +525,10 @@ AddModule("Plugins", function()
     function Plugins:Community()
         local Community = Plugins:NewPage({ "Community", "Join our community", 115960025411300 }) do
             Community:Section("Community") do
-                local Discord = Community:Input({ Value = "https://vuzchanz.blogspot.com" }) do
-                    Discord.TextEditable = false
-                    Discord.Interactable = false
-                    Discord.ClearTextOnFocus = false 
+                local WebsiteVuz = Community:Input({ Value = "https://vuzchanz.blogspot.com" }) do
+                    WebsiteVuz.TextEditable = false
+                    WebsiteVuz.Interactable = false
+                    WebsiteVuz.ClearTextOnFocus = false 
                 end
                 
                 local Banner = Utils.Asset:Get("DRACOCHANZ.png") do
