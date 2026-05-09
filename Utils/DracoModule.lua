@@ -10,7 +10,7 @@ local Repository = "ChizChanz"
 
 local function fetch(file)
     local URL = string.format(
-        "https://raw.githubusercontent.com/%s/%s/main/%s",
+        "https://raw.githubusercontent.com/%s/%s/refs/heads/main/%s",
         Owner, Repository, file
     )
 
